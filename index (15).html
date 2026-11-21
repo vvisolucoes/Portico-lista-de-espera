@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 fill=%22%23161817%22/%3E%3Cg transform=%22translate(8 8) scale(.75)%22%3E%3Cpath d=%22M8 9H56%22 stroke=%22%23ECEAE4%22 stroke-width=%222%22/%3E%3Crect x=%225%22 y=%2213%22 width=%2254%22 height=%228%22 fill=%22%23ECEAE4%22/%3E%3Crect x=%2213%22 y=%2221%22 width=%225%22 height=%2234%22 fill=%22%23ECEAE4%22/%3E%3Crect x=%2246%22 y=%2221%22 width=%225%22 height=%2234%22 fill=%22%23ECEAE4%22/%3E%3Cpath d=%22M5 57H59%22 stroke=%22%23C9A877%22 stroke-width=%223%22/%3E%3C/g%3E%3C/svg%3E">
+<title>Pórtico Obra · Lista de espera</title>
+<meta name="description" content="Estamos selecionando, a dedo, arquitetos, engenheiros e fornecedores de obra. Entre na lista e tenha acesso antecipado.">
+<meta property="og:title" content="Pórtico Obra · Lista de espera">
+<meta property="og:description" content="Os profissionais de obra mais bem avaliados, selecionados um a um.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#F5F4F0; --surface:#FFFFFF; --ink:#161817; --ink-2:#3E4240; --muted:#5B5F5C;
+  --line:#DCD9D2; --line-soft:#E8E5DF; --brass:#8A6A3B; --brass-light:#C9A877;
+  --dark-text:#ECEAE4; --dark-muted:#A3A39E; --err:#9B3B2E;
+  --display:'Archivo',sans-serif; --body:'Hanken Grotesk',system-ui,sans-serif; --mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,input,select{font:inherit}
+[hidden]{display:none!important}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.eyebrow{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+h1,h2,h3{font-family:var(--display);font-weight:500;margin:0}
+
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:22px;padding-bottom:22px;gap:16px}
+.logo .logo-word{display:flex;flex-direction:column;gap:3px;line-height:1}
+.logo .logo-sub{font-family:var(--mono);font-weight:400;font-size:.5em;letter-spacing:.62em;color:var(--brass);opacity:1}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:.18em;text-decoration:none}
+.city{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--muted)}
+
+/* HERO */
+.hero{display:flex;flex-wrap:wrap;gap:64px;padding-top:56px;padding-bottom:96px;align-items:flex-start}
+.copy{flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:28px;padding-top:24px}
+.copy h1{font-size:clamp(42px,5.6vw,78px);line-height:.98;letter-spacing:-.035em}
+.copy .lead{margin:0;font-size:19px;line-height:1.55;color:var(--ink-2);max-width:520px}
+.perks{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;border-top:1px solid var(--line);max-width:520px}
+.perks li{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line);font-size:16px;line-height:1.5}
+.perks .n{font-family:var(--mono);font-size:12px;color:var(--brass);padding-top:3px;flex:none;width:22px}
+.perks b{font-weight:600;display:block}
+.perks span.s{color:var(--ink-2)}
+.counter{display:flex;align-items:baseline;gap:12px;font-size:15px;color:var(--ink-2)}
+.counter b{font-family:var(--display);font-size:34px;font-weight:500;color:var(--ink);letter-spacing:-.02em}
+
+/* FORM CARD */
+.card{flex:1 1 440px;min-width:0;background:var(--surface);border:1px solid var(--line);box-shadow:0 30px 60px -40px rgba(22,24,23,.35)}
+.card-head{padding:28px 32px 0;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.card-head h2{font-size:24px;letter-spacing:-.01em}
+.steps-ind{display:flex;gap:6px}
+.steps-ind i{width:24px;height:3px;background:var(--line)}
+.steps-ind i.on{background:var(--ink)}
+form{padding:24px 32px 32px}
+.step{display:flex;flex-direction:column;gap:20px}
+fieldset{border:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+legend,.lbl{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;padding:0;margin-bottom:10px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;width:1px;height:1px}
+.opt span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--line);font-size:15px;cursor:pointer;background:var(--surface);transition:border-color .15s,background .15s}
+.opt span:hover{border-color:var(--ink)}
+.opt input:checked+span{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.opt input:focus-visible+span{outline:2px solid var(--brass);outline-offset:2px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.field input,.field select{min-height:52px;padding:0 14px;border:1px solid var(--line);background:var(--surface);font-size:16px;color:var(--ink);width:100%}
+.field input:focus,.field select:focus{outline:none;border-color:var(--ink)}
+.field input.bad{border-color:var(--err)}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.5;color:var(--ink-2);cursor:pointer}
+.consent input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--ink);flex:none}
+.err{min-height:20px;margin:0;font-size:14px;color:var(--err)}
+.nav{display:flex;gap:10px;justify-content:space-between;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;font-size:16px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;text-decoration:none}
+.btn-solid{background:var(--ink);color:var(--ground)}
+.btn-solid:hover{background:#2C2F2E}
+.btn:disabled{opacity:.6;cursor:wait}
+.back{border:none;padding:0 4px;color:var(--muted);min-height:44px}
+.back:hover{color:var(--ink)}
+.fine{margin:0;font-size:12px;color:var(--muted);line-height:1.5}
+
+.done{padding:40px 32px;display:flex;flex-direction:column;gap:18px}
+.done .big{font-family:var(--display);font-size:56px;font-weight:500;letter-spacing:-.03em;line-height:1}
+.done h2{font-size:30px;letter-spacing:-.02em}
+.done p{margin:0;font-size:16px;line-height:1.55;color:var(--ink-2)}
+.done .btn{align-self:flex-start}
+
+/* SECTIONS */
+.band{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.col{padding:44px 32px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:12px}
+.col:first-child{border-left:none;padding-left:0}
+.col .n{font-family:var(--mono);font-size:12px;color:var(--brass)}
+.col h3{font-size:22px}
+.col p{margin:0;font-size:15px;line-height:1.55;color:var(--ink-2)}
+@media (max-width:780px){.col{border-left:none;border-top:1px solid var(--line);padding:32px 0}.col:first-child{border-top:none}}
+.cats{padding-top:96px;padding-bottom:96px;display:flex;flex-wrap:wrap;gap:48px;justify-content:space-between;align-items:flex-start}
+.cats h2{flex:1 1 380px;font-size:clamp(32px,4vw,48px);line-height:1.05;letter-spacing:-.03em}
+.cat-list{flex:1 1 520px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));column-gap:32px;border-top:1px solid var(--ink)}
+.cat-list div{padding:18px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;font-size:17px}
+.cat-list div span{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.cat-list div span{white-space:nowrap}
+.faq{padding-bottom:96px}
+.faq h2{font-size:clamp(32px,4vw,48px);letter-spacing:-.03em;margin-bottom:32px}
+details{border-top:1px solid var(--line)}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;justify-content:space-between;gap:24px;font-size:18px;font-weight:500}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';font-family:var(--mono);color:var(--brass);font-size:20px}
+details[open] summary::after{content:'−'}
+details p{margin:0 0 22px;max-width:760px;font-size:16px;line-height:1.6;color:var(--ink-2)}
+footer{background:var(--ink);color:var(--dark-muted)}
+footer .wrap{padding-top:36px;padding-bottom:36px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font-size:14px}
+footer a{color:var(--dark-text)}
+
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  .hero{padding-top:24px;gap:40px}
+  .card-head{padding:24px 20px 0}
+  form,.done{padding:20px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Pórtico Obra">
+      <svg class="logo-mark" width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 9 H56" stroke="#161817" stroke-width="1.5"/><rect x="5" y="13" width="54" height="8" fill="#161817"/><rect x="13" y="21" width="5" height="34" fill="#161817"/><rect x="46" y="21" width="5" height="34" fill="#161817"/><path d="M5 57 H59" stroke="#C9A877" stroke-width="2.5"/></svg>
+      <span class="logo-word"><span>PÓRTICO</span><span class="logo-sub">OBRA</span></span>
+    </a>
+    <span class="city">EM BREVE</span>
+  </div>
+</header>
+
+<main>
+<section class="wrap hero">
+  <div class="copy">
+    <p class="eyebrow">Lista de espera · Acesso antecipado</p>
+    <h1>Os profissionais de obra que você gostaria de conhecer antes de começar.</h1>
+    <p class="lead">Estamos selecionando, um a um, os arquitetos, engenheiros e fornecedores mais bem avaliados. Entre na lista e seja dos primeiros a receber indicações.</p>
+    <ul class="perks">
+      <li><span class="n">01</span><span><b>Acesso antecipado</b><span class="s">Você recebe indicações antes da abertura ao público.</span></span></li>
+      <li><span class="n">02</span><span><b>Indicações sob medida</b><span class="s">Três nomes compatíveis com a sua obra, o seu prazo e o seu investimento.</span></span></li>
+      <li><span class="n">03</span><span><b>Condições de lançamento</b><span class="s">Benefícios combinados com os profissionais fundadores, só para quem está na lista.</span></span></li>
+    </ul>
+    <div class="counter" id="counter" hidden><b id="countNum">0</b><span>pessoas já estão na lista</span></div>
+  </div>
+
+  <div class="card" id="card">
+    <div class="card-head">
+      <h2 id="stepTitle">Sobre a sua obra</h2>
+      <div class="steps-ind" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+    </div>
+
+    <form id="wl" novalidate>
+      <!-- STEP 1 -->
+      <div class="step" data-step="1">
+        <fieldset>
+          <legend>O que você vai fazer</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="tipo" value="Reforma completa"><span>Reforma completa</span></label>
+            <label class="opt"><input type="radio" name="tipo" value="Reforma parcial"><span>Reforma parcial</span></label>
+            <label class="opt"><input type="radio" name="tipo" value="Construção"><span>Construção</span></label>
+            <label class="opt"><input type="radio" name="tipo" value="Interiores e marcenaria"><span>Interiores e marcenaria</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Tipo de imóvel</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="imovel" value="Apartamento"><span>Apartamento</span></label>
+            <label class="opt"><input type="radio" name="imovel" value="Casa"><span>Casa</span></label>
+            <label class="opt"><input type="radio" name="imovel" value="Comercial"><span>Comercial</span></label>
+          </div>
+        </fieldset>
+        <div class="row">
+          <div class="field"><label for="bairro">Bairro e cidade</label><input id="bairro" name="bairro" placeholder="Bairro, cidade" autocomplete="address-level3"></div>
+          <div class="field"><label for="m2">Metragem aprox.</label><input id="m2" name="m2" inputmode="numeric" placeholder="90 m²"></div>
+        </div>
+        <p class="err" id="err1" role="alert"></p>
+        <div class="nav"><span></span><button type="button" class="btn btn-solid" data-next="2">Continuar</button></div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="step" data-step="2" hidden>
+        <fieldset>
+          <legend>Quando pretende começar</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="quando" value="Próximos 3 meses"><span>Próximos 3 meses</span></label>
+            <label class="opt"><input type="radio" name="quando" value="3 a 6 meses"><span>3 a 6 meses</span></label>
+            <label class="opt"><input type="radio" name="quando" value="6 a 12 meses"><span>6 a 12 meses</span></label>
+            <label class="opt"><input type="radio" name="quando" value="Sem data"><span>Ainda sem data</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Investimento previsto</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="faixa" value="Até 50 mil"><span>Até R$ 50 mil</span></label>
+            <label class="opt"><input type="radio" name="faixa" value="50 a 150 mil"><span>R$ 50 a 150 mil</span></label>
+            <label class="opt"><input type="radio" name="faixa" value="150 a 400 mil"><span>R$ 150 a 400 mil</span></label>
+            <label class="opt"><input type="radio" name="faixa" value="Acima de 400 mil"><span>Acima de R$ 400 mil</span></label>
+            <label class="opt"><input type="radio" name="faixa" value="Não sei"><span>Ainda não sei</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>De quem você vai precisar</legend>
+          <div class="opts">
+            <label class="opt"><input type="checkbox" name="precisa" value="Arquitetura"><span>Arquiteto</span></label>
+            <label class="opt"><input type="checkbox" name="precisa" value="Engenharia"><span>Engenheiro</span></label>
+            <label class="opt"><input type="checkbox" name="precisa" value="Interiores"><span>Designer de interiores</span></label>
+            <label class="opt"><input type="checkbox" name="precisa" value="Marcenaria"><span>Marcenaria</span></label>
+            <label class="opt"><input type="checkbox" name="precisa" value="Elétrica"><span>Elétrica</span></label>
+            <label class="opt"><input type="checkbox" name="precisa" value="Marmoraria"><span>Marmoraria</span></label>
+            <label class="opt"><input type="checkbox" name="precisa" value="Gesso e pintura"><span>Gesso e pintura</span></label>
+            <label class="opt"><input type="checkbox" name="precisa" value="Vidraçaria e serralheria"><span>Vidraçaria e serralheria</span></label>
+            <label class="opt"><input type="checkbox" name="precisa" value="Paisagismo"><span>Paisagismo</span></label>
+            <label class="opt"><input type="checkbox" name="precisa" value="Iluminação"><span>Iluminação</span></label>
+            <label class="opt"><input type="checkbox" name="precisa" value="Não sei"><span>Ainda não sei</span></label>
+          </div>
+        </fieldset>
+        <p class="err" id="err2" role="alert"></p>
+        <div class="nav"><button type="button" class="btn back" data-prev="1">Voltar</button><button type="button" class="btn btn-solid" data-next="3">Continuar</button></div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="step" data-step="3" hidden>
+        <div class="field"><label for="nome">Seu nome</label><input id="nome" name="nome" autocomplete="name" placeholder="Nome e sobrenome"></div>
+        <div class="row">
+          <div class="field"><label for="whats">WhatsApp</label><input id="whats" name="whats" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 90000-0000"></div>
+          <div class="field"><label for="email">E-mail (opcional)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="voce@email.com"></div>
+        </div>
+        <label class="consent"><input type="checkbox" id="lgpd"><span>Autorizo a Pórtico a usar estes dados para me enviar indicações de profissionais e a compartilhá-los apenas com os profissionais que eu escolher.</span></label>
+        <p class="err" id="err3" role="alert"></p>
+        <div class="nav"><button type="button" class="btn back" data-prev="2">Voltar</button><button type="submit" class="btn btn-solid" id="submitBtn">Entrar na lista</button></div>
+        <p class="fine">Sem spam. Você pode sair da lista a qualquer momento respondendo nosso contato.</p>
+      </div>
+    </form>
+
+    <div class="done" id="done" hidden>
+      <p class="eyebrow">Você está na lista</p>
+      <span class="big" id="pos">Bem-vindo</span>
+      <h2>Obrigado, <span id="firstName"></span>.</h2>
+      <p>Assim que os primeiros profissionais da sua categoria forem selecionados, você recebe as indicações pelo WhatsApp, antes de todo mundo.</p>
+      <p>Conhece alguém que também vai reformar? Quem entra pela sua indicação também recebe acesso antecipado.</p>
+      <a class="btn btn-solid" id="shareBtn" href="#" target="_blank" rel="noopener">Compartilhar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="col"><span class="n">01</span><h3>Poucos, por escolha</h3><p>Cada profissional é selecionado a dedo. Você não precisa garimpar entre centenas de perfis.</p></div>
+    <div class="col"><span class="n">02</span><h3>Histórico verificado</h3><p>Prazo, orçamento e acabamento de cada obra, confirmados com quem contratou.</p></div>
+    <div class="col"><span class="n">03</span><h3>Gratuito para você</h3><p>Sem taxa e sem intermediação. A conversa e o contrato são diretos com o profissional.</p></div>
+  </div>
+</section>
+
+<section class="wrap cats">
+  <h2>O que estamos selecionando agora.</h2>
+  <div class="cat-list">
+    <div>Arquitetura<span>EM SELEÇÃO</span></div>
+    <div>Design de interiores<span>EM SELEÇÃO</span></div>
+    <div>Engenharia e gestão de obra<span>EM SELEÇÃO</span></div>
+    <div>Marcenaria<span>EM SELEÇÃO</span></div>
+    <div>Marmoraria<span>EM SELEÇÃO</span></div>
+    <div>Gesso e pintura<span>EM SELEÇÃO</span></div>
+    <div>Elétrica e automação<span>EM BREVE</span></div>
+    <div>Vidraçaria e serralheria<span>EM BREVE</span></div>
+    <div>Paisagismo<span>EM BREVE</span></div>
+    <div>Iluminação<span>EM BREVE</span></div>
+  </div>
+</section>
+
+<section class="wrap faq">
+  <h2>Dúvidas.</h2>
+  <details><summary>Quanto custa?</summary><p>Nada. Para quem vai contratar, a Pórtico é gratuita hoje e depois da abertura.</p></details>
+  <details><summary>Quando começam as indicações?</summary><p>Assim que as primeiras cadeiras de cada categoria forem preenchidas. Quem está na lista recebe antes, na ordem de inscrição e de acordo com o início previsto da obra.</p></details>
+  <details><summary>O que vocês fazem com os meus dados?</summary><p>Usamos apenas para entender a sua obra e enviar indicações. Esta página usa o Pixel da Meta para medir os anúncios. Seus dados só chegam a um profissional depois que você escolher falar com ele.</p></details>
+  <details><summary>Sou profissional. Como participo?</summary><p>Estamos conversando com os profissionais fundadores. Escreva para [contato@porticoobra.com.br] com o seu portfólio.</p></details>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>PÓRTICO OBRA</span>
+    <span>Profissional de obra? <a href="mailto:[contato@porticoobra.com.br]">Fale com a gente</a></span>
+  </div>
+</footer>
+
+<script type="module">
+/* =========================================================
+   CONFIGURAÇÃO
+   1) Crie um projeto no Firebase (plano Spark) e ative o Firestore.
+   2) Cole a config do app web abaixo.
+   3) Publique as regras que estão no fim deste arquivo.
+   Sem config, a página roda em modo de teste (salva só no navegador).
+   ========================================================= */
+const FIREBASE_CONFIG = {
+  apiKey: "COLE_AQUI",
+  authDomain: "COLE_AQUI",
+  projectId: "COLE_AQUI",
+  appId: "COLE_AQUI"
+};
+const SHOW_COUNTER_FROM = 50;   // o contador só aparece a partir deste número
+const META_PIXEL_ID = '';        // cole aqui o ID do Pixel (Gerenciador de Eventos da Meta)
+
+/* Pixel da Meta: só carrega quando o ID estiver preenchido */
+if (META_PIXEL_ID) {
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', META_PIXEL_ID);
+  fbq('track', 'PageView');
+}
+const SITE_URL = location.origin + location.pathname;
+
+const configured = !FIREBASE_CONFIG.projectId.startsWith('COLE');
+let db = null, fs = null;
+if (configured){
+  try {
+    const { initializeApp } = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js');
+    fs = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js');
+    db = fs.getFirestore(initializeApp(FIREBASE_CONFIG));
+  } catch (e){ console.warn('Firebase indisponível', e); }
+}
+
+const $ = (s) => document.querySelector(s);
+const val = (n) => { const el = document.querySelector(`input[name="${n}"]:checked`); return el ? el.value : ''; };
+const vals = (n) => [...document.querySelectorAll(`input[name="${n}"]:checked`)].map(e => e.value);
+
+/* contador público */
+async function loadCount(){
+  let n = 0;
+  if (db){ try { const s = await fs.getDoc(fs.doc(db, 'stats', 'waitlist')); n = s.exists() ? (s.data().count || 0) : 0; } catch(_){} }
+  if (n >= SHOW_COUNTER_FROM){ $('#countNum').textContent = n.toLocaleString('pt-BR'); $('#counter').hidden = false; }
+  return n;
+}
+loadCount();
+
+/* origem do acesso (Instagram, anúncio, indicação) */
+const qs = new URLSearchParams(location.search);
+const origem = {
+  utm_source: qs.get('utm_source') || '', utm_medium: qs.get('utm_medium') || '',
+  utm_campaign: qs.get('utm_campaign') || '', ref: qs.get('ref') || '', referrer: document.referrer || ''
+};
+
+/* passos */
+const titles = { 1:'Sobre a sua obra', 2:'Momento e investimento', 3:'Como falamos com você' };
+function go(n){
+  document.querySelectorAll('.step').forEach(s => s.hidden = s.dataset.step !== String(n));
+  document.querySelectorAll('.steps-ind i').forEach((i, k) => i.classList.toggle('on', k < n));
+  $('#stepTitle').textContent = titles[n];
+  const first = document.querySelector(`.step[data-step="${n}"] input`); if (first) first.focus({ preventScroll:true });
+  if (window.innerWidth < 900) $('#card').scrollIntoView({ behavior:'smooth', block:'start' });
+}
+function check(n){
+  const e = (m) => { $('#err' + n).textContent = m; return false; };
+  $('#err' + n).textContent = '';
+  if (n === 1){
+    if (!val('tipo')) return e('Escolha o que você vai fazer.');
+    if (!val('imovel')) return e('Escolha o tipo de imóvel.');
+    if (!$('#bairro').value.trim()) { $('#bairro').focus(); return e('Informe o bairro e a cidade da obra.'); }
+  }
+  if (n === 2){
+    if (!val('quando')) return e('Quando você pretende começar?');
+    if (!val('faixa')) return e('Escolha uma faixa de investimento.');
+  }
+  if (n === 3){
+    if ($('#nome').value.trim().length < 2) { $('#nome').focus(); return e('Informe o seu nome.'); }
+    const d = $('#whats').value.replace(/\D/g, '');
+    if (d.length < 10 || d.length > 11) { $('#whats').focus(); return e('Confira o número de WhatsApp com DDD.'); }
+    if (!$('#lgpd').checked) return e('Para entrar na lista, é preciso autorizar o uso dos dados.');
+  }
+  return true;
+}
+document.addEventListener('click', (ev) => {
+  const nx = ev.target.closest('[data-next]'); if (nx){ const cur = +nx.dataset.next - 1; if (check(cur)) go(+nx.dataset.next); return; }
+  const pv = ev.target.closest('[data-prev]'); if (pv) go(+pv.dataset.prev);
+});
+
+/* máscara de WhatsApp */
+$('#whats').addEventListener('input', (e) => {
+  let d = e.target.value.replace(/\D/g, '').slice(0, 11);
+  e.target.value = d.length > 6 ? `(${d.slice(0,2)}) ${d.slice(2, d.length - 4)}-${d.slice(-4)}` : d.length > 2 ? `(${d.slice(0,2)}) ${d.slice(2)}` : d;
+});
+
+/* envio */
+$('#wl').addEventListener('submit', async (ev) => {
+  ev.preventDefault();
+  if (!check(3)) return;
+  const btn = $('#submitBtn'); btn.disabled = true; btn.textContent = 'Enviando…';
+  const lead = {
+    tipo: val('tipo'), imovel: val('imovel'), bairro: $('#bairro').value.trim(), m2: $('#m2').value.trim(),
+    quando: val('quando'), faixa: val('faixa'), precisa: vals('precisa'),
+    nome: $('#nome').value.trim(), whats: $('#whats').value.replace(/\D/g, ''), email: $('#email').value.trim(),
+    consentimento: true, ...origem, criadoEm: new Date().toISOString()
+  };
+  let pos = 0;
+  try {
+    if (db){
+      await fs.addDoc(fs.collection(db, 'waitlist'), { ...lead, criadoEmServidor: fs.serverTimestamp() });
+      try { await fs.setDoc(fs.doc(db, 'stats', 'waitlist'), { count: fs.increment(1) }, { merge:true }); } catch(_){}
+      pos = await loadCount();
+    } else {
+      const all = JSON.parse(localStorage.getItem('portico_waitlist') || '[]'); all.push(lead);
+      localStorage.setItem('portico_waitlist', JSON.stringify(all)); pos = all.length;
+      console.info('[Pórtico] modo de teste: inscrição salva só neste navegador', lead);
+    }
+  } catch (e){
+    btn.disabled = false; btn.textContent = 'Entrar na lista';
+    $('#err3').textContent = 'Não foi possível enviar agora. Tente de novo em instantes.'; return;
+  }
+  $('#wl').hidden = true; document.querySelector('.card-head').hidden = true; $('#done').hidden = false;
+  // evento de conversão para o Meta otimizar a campanha
+  if (window.fbq) fbq('track', 'Lead', { content_category: lead.tipo, content_name: lead.quando });
+  $('#firstName').textContent = lead.nome.split(' ')[0];
+  $('#pos').textContent = pos >= SHOW_COUNTER_FROM ? `Nº ${pos.toLocaleString('pt-BR')}` : 'Bem-vindo';
+  const refCode = lead.whats.slice(-4);
+  const shareUrl = `${SITE_URL}?utm_source=whatsapp&utm_medium=indicacao&ref=${refCode}`;
+  $('#shareBtn').href = `https://wa.me/?text=${encodeURIComponent('Entrei na lista da Pórtico, que está selecionando os melhores profissionais de obra. Se você vai reformar, entra também: ' + shareUrl)}`;
+});
+
+/* =========================================================
+   REGRAS DO FIRESTORE (cole em Firestore → Regras → Publicar)
+
+   rules_version = '2';
+   service cloud.firestore {
+     match /databases/{db}/documents {
+       match /waitlist/{id} {
+         allow create: if request.resource.data.consentimento == true
+                       && request.resource.data.nome is string
+                       && request.resource.data.whats is string;
+         allow read, update, delete: if false;
+       }
+       match /stats/waitlist {
+         allow read: if true;
+         allow create: if request.resource.data.count == 1;
+         allow update: if request.resource.data.count == resource.data.count + 1;
+       }
+     }
+   }
+
+   Para ver a lista: Firebase Console → Firestore → coleção "waitlist"
+   (ou exporte para planilha).
+   ========================================================= */
+</script>
+</body>
+</html>
